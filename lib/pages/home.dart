@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
           onPressed: () {
             counterController.increment();
           },
-          child: const Icon(Icons.addgt),
+          child: const Icon(Icons.add),
         ),
         body: Obx(
           () => Column(
