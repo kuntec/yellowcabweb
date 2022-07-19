@@ -8,6 +8,7 @@ class SmallScreen extends StatelessWidget {
     return Container(
       constraints: BoxConstraints.expand(),
       color: Colors.green,
+      child: Text("Hello"),
     );
   }
 }

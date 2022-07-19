@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:yellowcabweb/controllers/menu_controller.dart';
-import 'package:yellowcabweb/layout.dart';
+import 'package:yellowcabweb/site_layout.dart';
+import 'package:yellowcabweb/screens/homepage.dart';
 
 void main() {
-  Get.put(MenuController());
+//  Get.put(MenuController());
   runApp(MyApp());
 }
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Dashboard',
       theme: ThemeData(
+          visualDensity: VisualDensity.adaptivePlatformDensity,
           backgroundColor: Colors.white,
           textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
               .apply(bodyColor: Colors.black),
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
             TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
           }),
           primaryColor: Colors.blue),
-      home: SileLayout(),
+      home: Homepage(),
     );
   }
 }
